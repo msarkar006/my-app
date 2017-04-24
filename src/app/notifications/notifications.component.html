@@ -1,0 +1,21 @@
+
+ 
+<ul>
+ <h3> Add Notifications </h3>
+ <form (submit)="addNotification()">
+
+   <input type="text" [(ngModel)]="newITem" name="newITem">
+   <input type="submit" value="Submit">
+   
+ </form>
+
+  
+  <li  *ngFor ="let notification of notifications">
+    {{notification.title}} <button (click)="deleteNotification(notification.title)"></button>
+    
+  </li>
+  
+  
+</ul>
+
+
